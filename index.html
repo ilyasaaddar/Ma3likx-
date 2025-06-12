@@ -376,13 +376,12 @@
                 return;
             }
 
-            // رابط Google Form الخاص بك الذي قدمته
-            // تذكر أن هذا الرابط هو للعرض فقط. لإرسال البيانات، نحتاج إلى رابط الإرسال (formResponse)
-            const googleFormBaseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSebw0Uf1IG_6tCUVqmaY_VGbd8h2yA32tEgX3sbA8piQ1P4Cw';
-            const googleFormSubmitUrl = googleFormBaseUrl + '/formResponse';
+            // رابط Google Form الجديد الذي قدمته
+            const googleFormBaseUrl = 'https://forms.gle/JU1KSeohJGApcwN76';
+            const googleFormSubmitUrl = googleFormBaseUrl.replace('/viewform', '/formResponse'); // تحويل الرابط إلى رابط الإرسال
 
-            // هذه هي معرفات الحقول (Entry IDs) التي تتوافق مع نموذج Google Form الخاص بك
-            // لقد قمت باستخراجها من نموذجك:
+            // هذه هي معرفات الحقول (Entry IDs) الجديدة التي تتوافق مع نموذج Google Form المحدث
+            // لقد قمت باستخراجها من نموذجك الجديد:
             // الاسم الكامل: entry.2005697330
             // البريد الإلكتروني: entry.1045781681
             // رقم الهاتف: entry.1166974658
@@ -411,4 +410,4 @@
         });
     </script>
 </body>
-</html>
+    </html>
