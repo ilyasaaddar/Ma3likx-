@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سماعات [اسم المنتج] اللاسلكية - تجربة صوت لا تُضاهى</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /*
+        ------------------------------------------
+        CSS - تصميم صفحة الهبوط
+        ------------------------------------------
+        */
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f7f6;
+            color: #333;
+            direction: rtl; /* اتجاه الكتابة من اليمين لليسار للعربية */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #218838;
+        }
+
+        section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            color: #007bff;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: #28a745;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            text-align: right; /* محاذاة النص لليمين داخل العناصر */
+        }
+
+        .feature-item h3 {
+            color: #007bff;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .testimonials {
+            background-color: #e9ecef;
+        }
+
+        .testimonial-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .testimonial-item p {
+            margin-bottom: 10px;
+        }
+
+        .testimonial-item span {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .contact-form-section {
+            background-color: #ffffff;
+            padding: 60px 0;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: right; /* محاذاة حقول النموذج لليمين */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group textarea {
+            width: calc(100% - 20px); /* Adjust width to account for padding */
+            padding: 12px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box; /* Include padding in element's total width and height */
+            text-align: right; /* Align text to the right for input fields */
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group input[type="checkbox"] {
+            margin-left: 10px; /* Space between checkbox and text */
+        }
+
+        .form-group label.checkbox-label {
+            display: inline;
+            font-weight: normal;
+        }
+
+        .form-group .privacy-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .form-group .privacy-link:hover {
+            text-decoration: underline;
+        }
+
+        .submit-button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: auto; /* Allow button to size based on content */
+            display: block; /* Make button take full width */
+            margin: 20px auto 0 auto; /* Center the button */
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links a {
+            font-size: 1.5em;
+            margin: 0 10px;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #007bff;
+        }
+
+        /* Basic responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1.2em;
+            }
+            .hero-image {
+                max-width: 90%;
+            }
+            section h2 {
+                font-size: 2em;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-form {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>اكتشف تجربة صوت لا تُضاهى: سماعات [اسم المنتج] اللاسلكية</h1>
+            <p>استمتع بنقاء صوت استثنائي، راحة لا مثيل لها، وبطارية تدوم طويلاً. مثالية للموسيقى، المكالمات، وكل لحظة.</p>
+            <img src="images/headphones_hero.jpg" alt="سماعات بلوتوث [اسم المنتج]" class="hero-image">
+            <br><br>
+            <a href="#contact" class="cta-button">تواصل معنا الآن!</a>
+        </div>
+    </header>
+
+    <section id="features" class="container">
+        <h2>لماذا تختار سماعات [اسم المنتج]؟</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <h3>جودة صوت فائقة</h3>
+                <p>صوت نقي وواضح بجودة HD، لتجربة استماع غنية وعميقة لموسيقاك المفضلة.</p>
+            </div>
+            <div class="feature-item">
+                <h3>عمر بطارية طويل</h3>
+                <p>استمتع بـ <span>24 ساعة</span> من الاستماع المتواصل بشحنة واحدة. لا تقلق أبداً بشأن نفاد البطارية.</p>
+            </div>
+            <div class="feature-item">
+                <h3>تصميم مريح وأنيق</h3>
+                <p>تصميم خفيف الوزن ومريح يسمح بالاستخدام لساعات طويلة دون إزعاج. متوفرة بألوان متعددة.</p>
+            </div>
+            <div class="feature-item">
+                <h3>اتصال بلوتوث مستقر</h3>
+                <p>تقنية بلوتوث 5.3 لربط فوري ومستقر مع جميع أجهزتك الذكية.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>ماذا يقول عملاؤنا السعداء؟</h2>
+            <div class="testimonial-item">
+                <p>"صوت هذه السماعات لا يصدق! البطارية كتدوم طويلاً وهي مريحة جداً. أنصح بها بشدة!"</p>
+                <span>- أحمد</span>
+            </div>
+            <div class="testimonial-item">
+                <p>"أفضل سماعات بلوتوث جربتها على الإطلاق. الاتصال سريع والجودة ممتازة، والتصميم أنيق للغاية."</p>
+                <span>- فاطمة</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-form-section">
+        <div class="container">
+            <h2>هل أنت مستعد لتجربة صوت لا مثيل لها؟</h2>
+            <p>املأ النموذج أدناه وسنتواصل معك في أقرب وقت للإجابة على استفساراتك أو إتمام طلبك.</p>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">الاسم الكامل:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">رسالتك (اختياري):</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="privacyConsent" name="privacyConsent" required>
+                    <label for="privacyConsent" class="checkbox-label">أوافق على <a href="privacy-policy.html" class="privacy-link" target="_blank">سياسة الخصوصية</a> وأسمح لـ [اسم شركتك] بالتواصل معي.</label>
+                </div>
+                <button type="submit" class="submit-button">أرسل طلبي!</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 [اسم شركتك]. جميع الحقوق محفوظة.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><img src="images/facebook_icon.png" alt="Facebook" width="24"></a>
+                <a href="#" aria-label="Instagram"><img src="images/instagram_icon.png" alt="Instagram" width="24"></a>
+                <a href="#" aria-label="Twitter"><img src="images/twitter_icon.png" alt="Twitter" width="24"></a>
+            </div>
+            <p><a href="privacy-policy.html">سياسة الخصوصية</a> | <a href="terms-of-service.html">شروط الخدمة</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // منع الإرسال الافتراضي للنموذج
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            const privacyConsent = document.getElementById('privacyConsent').checked;
+
+            if (!privacyConsent) {
+                alert('الرجاء الموافقة على سياسة الخصوصية للمتابعة.');
+                return;
+            }
+
+            // رابط Google Form الخاص بك الذي قدمته
+            // تذكر أن هذا الرابط هو للعرض فقط. لإرسال البيانات، نحتاج إلى رابط الإرسال (formResponse)
+            const googleFormBaseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSebw0Uf1IG_6tCUVqmaY_VGbd8h2yA32tEgX3sbA8piQ1P4Cw';
+            const googleFormSubmitUrl = googleFormBaseUrl + '/formResponse';
+
+            // هذه هي معرفات الحقول (Entry IDs) التي تتوافق مع نموذج Google Form الخاص بك
+            // لقد قمت باستخراجها من نموذجك:
+            // الاسم الكامل: entry.2005697330
+            // البريد الإلكتروني: entry.1045781681
+            // رقم الهاتف: entry.1166974658
+            // رسالتك: entry.839337160
+            const formData = new FormData();
+            formData.append('entry.2005697330', name);    // الاسم الكامل
+            formData.append('entry.1045781681', email);   // البريد الإلكتروني
+            formData.append('entry.1166974658', phone);   // رقم الهاتف
+            formData.append('entry.839337160', message);  // رسالتك
+
+            fetch(googleFormSubmitUrl, {
+                method: 'POST',
+                mode: 'no-cors', // مهم للسماح بالطلب عبر النطاقات المختلفة بدون مشاكل CORS مع Google Forms
+                body: formData
+            })
+            .then(response => {
+                // بما أن 'no-cors' لا يرجع استجابة قابلة للقراءة (بسبب القيود الأمنية)،
+                // نفترض أن الطلب تم إرساله بنجاح إذا لم يحدث خطأ في الشبكة.
+                alert('شكراً لك! لقد تم استلام طلبك وسنتواصل معك قريباً.');
+                document.getElementById('contactForm').reset(); // مسح النموذج بعد الإرسال
+            })
+            .catch(error => {
+                console.error('خطأ في إرسال النموذج:', error);
+                alert('حدث خطأ أثناء إرسال طلبك. الرجاء المحاولة مرة أخرى.');
+            });
+        });
+    </script>
+</body>
+</html>
